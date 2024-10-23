@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilos para componentes comuns */
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  input[type="text"], input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /* Estilos específicos para a tela de cozinha */
+  .resumo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .resumo-item {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .lista-pedidos {
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+  
+  .pedido {
+    min-width: 200px;
+    margin-right: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .catalogo table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .catalogo th, .catalogo td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .catalogo th {
+    background-color: #f8f9fa;
+  }
+  
+  /* Responsividade adicional */
+  @media (max-width: 768px) {
+    .resumo {
+      flex-direction: column;
+    }
+  
+    .resumo-item {
+      margin-bottom: 10px;
+    }
+  
+    .lista-pedidos {
+      flex-wrap: wrap;
+    }
+  
+    .pedido {
+      width: calc(50% - 10px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pedido {
+      width: 100%;
+    }
+  
+    .catalogo table {
+      font-size: 14px;
+    }
+  
+    .catalogo th, .catalogo td {
+      padding: 8px;
+    }
+  }

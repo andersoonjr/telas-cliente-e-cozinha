@@ -1,0 +1,18 @@
+<div class="lista-pedidos">
+    <div class="pedido" 
+         [ngClass]="{
+             'em-preparo': pedido.status === 'em-preparo',
+             'pronto-retirada': pedido.status === 'pronto-retirada',
+             'entregue': pedido.status === 'entregue'
+         }"
+         *ngFor="let pedido of pedidos">
+        <h3>#{{pedido.numero}}</h3>
+        <p>{{pedido.descricao}}</p>
+        <p>R$ {{pedido.valor}}</p>
+        <select [(ngModel)]="pedido.status" (change)="alterarStatus(pedido, pedido.status)">
+            <option value="em-preparo">Em Preparo</option>
+            <option value="pronto-retirada">Pronto p/ Retirada</option>
+            <option value="entregue">Entregue</option>
+        </select>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+.lista-pedidos {
+    display: flex;
+    justify-content: center; /* Centraliza a lista horizontalmente */
+    overflow-x: auto; /* Permite rolagem horizontal se necessário */
+    margin-bottom: 20px;
+    
+}
+
+.pedido {
+    min-width: 100px;
+    margin: 0 60px; /* Margem lateral para espaçamento entre os pedidos */
+    padding: 20px;
+    border: 5px solid #ccc;
+    border-radius: 50px;
+    text-align: center; /* Centraliza o texto dentro do pedido */
+}
+
+.em-preparo {
+    background-color: red;
+    color: white;
+}
+
+.pronto-retirada {
+    background-color: yellow;
+    color: black;
+}
+
+.entregue {
+    background-color: green;
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .pedido {
+        min-width: 50px;
+        margin: 10px 0; /* Ajuste de margens em telas menores */
+    }
+}

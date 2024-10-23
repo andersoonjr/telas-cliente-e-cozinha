@@ -1,0 +1,19 @@
+.order-summary {
+    margin-top: 30px;
+  }
+  
+  .order-summary ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .order-summary li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .order-summary p {
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,15 @@
+.product-item {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .product-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #c00;
+  }
+  

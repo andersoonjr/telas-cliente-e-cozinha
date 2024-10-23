@@ -1,0 +1,11 @@
+.resumo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .resumo-item {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+  }

@@ -1,0 +1,53 @@
+<div class="container">
+    <header>
+      <h1>VEM COMER</h1>
+      <p>PEÇA FÁCIL, COMA FELIZ</p>
+    </header>
+
+    <div class="catalogo">
+      <h2>Catálogo de Produtos</h2>
+      <form (ngSubmit)="adicionarProduto()" #produtoForm="ngForm">
+        <input [(ngModel)]="novoProduto.nome" name="nome" placeholder="Nome" required>
+        <input [(ngModel)]="novoProduto.descricao" name="descricao" placeholder="Descrição">
+        <input [(ngModel)]="novoProduto.valor" name="valor" placeholder="Valor" required>
+        <input [(ngModel)]="novoProduto.imagem" name="imagem" placeholder="URL da Imagem" required>
+        <button type="submit" [disabled]="!produtoForm.form.valid">Adicionar Produto</button>
+      </form>
+    
+      <h3 *ngIf="editandoProduto">Editando Produto: {{editandoProduto.nome}}</h3>
+      <div *ngIf="editandoProduto">
+        <input [(ngModel)]="editandoProduto.nome" placeholder="Nome">
+        <input [(ngModel)]="editandoProduto.descricao" placeholder="Descrição">
+        <input type="number" [(ngModel)]="editandoProduto.valor" placeholder="Valor">
+        <input [(ngModel)]="editandoProduto.imagem" placeholder="URL da Imagem">
+        <button (click)="salvarEdicao()">Salvar</button>
+        <button (click)="cancelarEdicao()">Cancelar</button>
+      </div>
+    
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Imagem</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let produto of produtos">
+            <td>{{produto.nome}}</td>
+            <td>{{produto.descricao}}</td>
+            <td>R$ {{produto.valor}}</td>
+            <td><img [src]="produto.imagem" alt="{{produto.nome}}" width="50"></td>
+            <td>
+              <button (click)="editarProduto(produto)">Editar</button>
+              <button (click)="excluirProduto(produto.nome)">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+  

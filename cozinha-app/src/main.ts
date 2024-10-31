@@ -2,11 +2,13 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter, Route } from '@angular/router';
 import { AppComponent } from './app/app.component';
 import { CozinhaComponent } from './app/pages/cozinha/cozinha.component';
+import { OrderComponent } from './app/pages/order/order.component';
 
 const routes: Route[] = [
-  { path: '', redirectTo: 'cozinha', pathMatch: 'full' }, // Redireciona para /cozinha
+  { path: '', redirectTo: 'cliente', pathMatch: 'full' }, // Redireciona para /cliente
   { path: 'cozinha', component: CozinhaComponent }, // Define a rota /cozinha
-  { path: '**', redirectTo: 'cozinha' }, // Redireciona qualquer rota inválida para /cozinha
+  { path: 'cliente', component: OrderComponent }, // Define a rota /cliente
+  { path: '**', redirectTo: 'cliente' }, // Redireciona qualquer rota inválida para /cliente
 ];
 
 bootstrapApplication(AppComponent, {

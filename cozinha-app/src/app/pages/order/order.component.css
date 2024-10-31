@@ -1,0 +1,45 @@
+.delivery-info {
+    margin-top: 30px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .order-summary {
+    margin-top: 30px;
+  }
+  
+  .order-summary ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .order-summary li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .order-summary p {
+    font-weight: bold;
+  }
+  
+  .product-item {
+    border: 30px solid rgb(57, 81, 214);
+    text-align: center;
+    padding: 60px;
+  }
+  
+  .product-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #c00;
+  }
+  
